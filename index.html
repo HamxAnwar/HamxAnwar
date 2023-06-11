@@ -14,34 +14,75 @@
     <h2 class="animated-subheading">Electronics Engineer | AI and Robotics Engineer</h2>
   </header>
 
-  <section id="about" class="animated-section">
-    <h3>About Me</h3>
-    <p>I am a passionate electronics engineer specializing in AI and robotics. With a strong academic background and hands-on experience in the field, I thrive on designing innovative solutions that push the boundaries of technology. My expertise lies in developing intelligent systems and integrating AI algorithms into robotics projects.</p>
-  </section>
+  <div class="container">
+    <div class="tab">
+      <button class="tablinks" onclick="openTab(event, 'about')">About</button>
+      <button class="tablinks" onclick="openTab(event, 'education')">Education</button>
+      <button class="tablinks" onclick="openTab(event, 'experience')">Experience</button>
+      <button class="tablinks" onclick="openTab(event, 'skills')">Skills</button>
+      <button class="tablinks" onclick="openTab(event, 'projects')">Projects</button>
+      <button class="tablinks" onclick="openTab(event, 'contact')">Contact</button>
+    </div>
 
-  <section id="education" class="animated-section">
-    <h3>Education</h3>
-    <ul>
-      <li>Bachelor of Science in Electronics Engineering, [University Name], [Year]</li>
-      <li>Master of Science in AI and Robotics, [University Name], [Year]</li>
-    </ul>
-  </section>
+    <div id="about" class="tabcontent animated-section">
+      <h3>About Me</h3>
+      <p>I am a passionate electronics engineer specializing in AI and robotics. With a strong academic background and hands-on experience in the field, I thrive on designing innovative solutions that push the boundaries of technology. My expertise lies in developing intelligent systems and integrating AI algorithms into robotics projects.</p>
+      <img src="images/hamzaProfessional.jpg" alt="About Me Image">
+    </div>
 
-  <section id="experience" class="animated-section">
-    <h3>Work Experience</h3>
-    <p>Robotics Engineer, CARL (Center for Advanced Robotics and Automation), NCRA/BUITEMS</p>
-    <ul>
-      <li>Developed and implemented robotic control systems using advanced algorithms.</li>
-      <li>Collaborated with multidisciplinary teams to design and build autonomous robots for various applications.</li>
-      <li>Conducted experiments and tests to validate the performance and reliability of robotic systems.</li>
-    </ul>
-  </section>
+    <div id="education" class="tabcontent animated-section">
+      <h3>Education</h3>
+      <ul>
+        <li>Bachelor of Science in Electronics Engineering, [University Name], [Year]</li>
+        <li>Master of Science in AI and Robotics, [University Name], [Year]</li>
+      </ul>
+      <img src="images/hamzaChilling.jpg" alt="Education Image">
+    </div>
 
-  <!-- Add more sections for skills, projects, publications, achievements, and contact -->
+    <div id="experience" class="tabcontent animated-section">
+      <h3>Work Experience</h3>
+      <p>Robotics Engineer, CARL (Center for Advanced Robotics and Automation), NCRA/BUITEMS</p>
+      <ul>
+        <li>Developed and implemented robotic control systems using advanced algorithms.</li>
+        <li>Collaborated with multidisciplinary teams to design and build autonomous robots for various applications.</li>
+        <li>Conducted experiments and tests to validate the performance and reliability of robotic systems.</li>
+      </ul>
+      <img src="images/hamzaPicnic.jpg" alt="Experience Image">
+    </div>
 
-  <footer>
-    <p>© 2023 [Your Name]</p>
-  </footer>
+    <div id="skills" class="tabcontent animated-section">
+      <h3>Skills</h3>
+      <ul>
+        <li>Robotics: Robotic perception, motion planning, control systems, sensor integration</li>
+        <li>Artificial Intelligence: Machine learning, deep learning, computer vision, natural language processing</li>
+        <li>Programming: Python, C++, MATLAB, ROS (Robot Operating System)</li>
+        <li>Electronics: Circuit design, PCB prototyping, embedded systems</li>
+      </ul>
+      <img src="images/hamzaChilling.jpg" alt="Skills Image">
+    </div>
+
+    <div id="projects" class="tabcontent animated-section">
+      <h3>Projects</h3>
+      <p>Here are some of my notable projects:</p>
+      <ul>
+        <li>Project 1</li>
+        <li>Project 2</li>
+        <li>Project 3</li>
+      </ul>
+      <img src="images/hamzaProfessional.jpg" alt="Projects Image">
+    </div>
+
+    <div id="contact" class="tabcontent animated-section">
+      <h3>Contact</h3>
+      <p>You can reach me at:</p>
+      <ul>
+        <li>Email: yourname@example.com</li>
+        <li>Phone: 123-456-7890</li>
+        <li>Address: Your City, State, Country</li>
+      </ul>
+      <img src="images/hamzaPicnic.jpg" alt="Contact Image">
+    </div>
+  </div>
 
   <script src="script.js"></script>
 </body>

@@ -4,6 +4,8 @@ body {
   font-family: Arial, sans-serif;
   background-color: #000;
   color: #fff;
+  margin: 0;
+  padding: 0;
 }
 
 header {
@@ -32,30 +34,65 @@ header {
   animation: fade-in 1s ease-in-out forwards;
 }
 
-@keyframes fade-in {
-  0% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
-  }
+.container {
+  display: flex;
+  margin-top: 30px;
 }
 
-.animated-section {
-  animation: fade-in-up 1s ease-in-out forwards;
-  opacity: 0;
-  transform: translateY(30px);
+.tab {
+  flex: 0 0 20%;
+  background-color: #333;
+  padding: 20px;
+  text-align: center;
 }
 
-@keyframes fade-in-up {
-  0% {
-    opacity: 0;
-    transform: translateY(30px);
-  }
-  100% {
-    opacity: 1;
-    transform: translateY(0);
-  }
+.tab button {
+  background-color: inherit;
+  color: #fff;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  padding: 15px 20px;
+  font-size: 16px;
+  width: 100%;
+  transition: background-color 0.3s ease;
+}
+
+.tab button:hover {
+  background-color: #555;
+}
+
+.tabcontent {
+  flex: 0 0 80%;
+  padding: 20px;
+  display: none;
+  background-color: #000;
+}
+
+.section-title {
+  text-align: center;
+  font-size: 32px;
+  margin-bottom: 20px;
+}
+
+.tabcontent p {
+  margin-bottom: 10px;
+}
+
+.tabcontent ul {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+  margin-bottom: 20px;
+}
+
+.tabcontent ul li {
+  margin-bottom: 5px;
+}
+
+.tabcontent img {
+  max-width: 100%;
+  margin-top: 20px;
 }
 
 /* Add more styles for other sections, elements, and animations */
