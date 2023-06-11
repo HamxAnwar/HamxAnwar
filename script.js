@@ -44,3 +44,4 @@ function openTab(event, tabId) {
   
   // Set the default tab to be opened on page load
   document.getElementsByClassName('tablinks')[0].click();
+  
