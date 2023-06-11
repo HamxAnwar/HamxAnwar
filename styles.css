@@ -1,12 +1,5 @@
 /* Add the necessary styles for each section and element */
 
-/* body {
-  font-family: Arial, sans-serif;
-  margin: 0;
-  padding: 0;
-  background: linear-gradient(to bottom right, #7031a0, #13c5c8, #7031a0);
-} */
-
 body {
   font-family: Arial, sans-serif;
   margin: 0;
@@ -14,6 +7,7 @@ body {
   background: linear-gradient(45deg, #09192f, #0a3c68, #093c22, #1d1d1d);
   background-size: 800% 800%;
   animation: rainbow 12s ease infinite;
+  overflow-x: hidden;
 }
 
 @keyframes rainbow {
@@ -66,18 +60,6 @@ header {
   font-size: 24px;
   animation: fade-in 1s ease-in-out forwards;
 }
-/* 
-header {
-  text-align: center;
-  padding: 50px;
-  color: #fff;
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
-} */
-
-/* .animated-heading {
-  font-size: 48px;
-  animation: slide-in-left 1s ease-in-out forwards;
-} */
 
 @keyframes slide-in-left {
   0% {
@@ -97,7 +79,11 @@ header {
 
 .container {
   display: flex;
-  margin-top: 30px;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  align-items: flex-start;
+  max-width: 100%;
+  overflow-x: hidden;
 }
 
 .tab {
@@ -128,7 +114,7 @@ header {
 }
 
 .tabcontent {
-  flex: 0 0 80%;
+  flex: 0 0 70%;
   padding: 20px;
   display: none;
   background-color: rgba(255, 255, 255, 0.1);
@@ -143,19 +129,6 @@ header {
     opacity: 1;
   }
 }
-
-/* .fade-out {
-  animation: fade-out 0.10s ease-in-out;
-}
-
-@keyframes fade-out {
-  from {
-    opacity: 1;
-  }
-  to {
-    opacity: 0;
-  }
-} */
 
 .section-title {
   text-align: center;
@@ -183,11 +156,27 @@ header {
 }
 
 .tabcontent img {
-  max-width: 100%;
+  max-width: 30%;
   margin: 20px auto;
   display: block;
   border-radius: 5px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+
+.contact-info {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: space-around; /* Adjust this property to change the dispersion */
+  align-items: center; /* Center the icons vertically */
+
+}
+
+.contact-info a {
+  color: #000000; /* Set the color for the icons */
+  text-decoration: none; /* Remove underline from the icons */
+  font-size: 30px; /* Set the size of the icons */
 }
 
 /* Add more styles for other sections, elements, and animations */
