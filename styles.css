@@ -1,77 +1,114 @@
-// Open the specified tab and show its content with sliding animation
-function openTab(event, tabId) {
-  const tabContents = document.getElementsByClassName('tabcontent');
-  const activeTab = document.getElementById(tabId);
+/* Add the necessary styles for each section and element */
 
-  // Check if the tab is already active
-  if (activeTab.style.display === 'block') {
-    return;
-  }
-
-  for (let i = 0; i < tabContents.length; i++) {
-    const tabContent = tabContents[i];
-
-    if (tabContent.style.display === 'block') {
-      // Slide out the currently active tab
-      slideOut(tabContent);
-
-      setTimeout(() => {
-        tabContent.style.display = 'none';
-
-        // Slide in the selected tab
-        slideIn(activeTab);
-        activeTab.style.display = 'block';
-      }, 500); // Wait for slide-out animation to finish
-    }
-  }
-
-  const tabLinks = document.getElementsByClassName('tablinks');
-  for (let i = 0; i < tabLinks.length; i++) {
-    tabLinks[i].classList.remove('active');
-  }
-
-  event.currentTarget.classList.add('active');
+body {
+  font-family: Arial, sans-serif;
+  background-color: #000;
+  color: #fff;
+  margin: 0;
+  padding: 0;
 }
 
-// Slide out the specified element
-function slideOut(element) {
-  let pos = 0;
-  const id = setInterval(frame, 5);
+header {
+  text-align: center;
+  padding: 50px;
+}
 
-  function frame() {
-    if (pos === 100) {
-      clearInterval(id);
-      element.style.display = 'none';
-    } else {
-      pos++;
-      element.style.right = pos + '%';
-    }
+.animated-heading {
+  font-size: 48px;
+  animation: slide-in-left 1s ease-in-out forwards;
+}
+
+@keyframes slide-in-left {
+  0% {
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
   }
 }
 
-// Slide in the specified element
-function slideIn(element) {
-  let pos = -100;
-  element.style.display = 'block';
-  const id = setInterval(frame, 5);
+.animated-subheading {
+  font-size: 24px;
+  animation: fade-in 1s ease-in-out forwards;
+}
 
-  function frame() {
-    if (pos === 0) {
-      clearInterval(id);
-    } else {
-      pos++;
-      element.style.right = pos + '%';
-    }
+.container {
+  display: flex;
+  margin-top: 30px;
+}
+
+.tab {
+  flex: 0 0 20%;
+  background-color: #333;
+  padding: 20px;
+  text-align: center;
+}
+
+.tab button {
+  background-color: #333;
+  color: #fff;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  padding: 15px 20px;
+  font-size: 16px;
+  width: 100%;
+  transition: background-color 0.3s ease;
+}
+
+.tab button:hover {
+  background-color: #555;
+}
+
+.tab button.active {
+  background-color: #555;
+}
+
+.tabcontent {
+  flex: 0 0 80%;
+  padding: 20px;
+  display: none;
+  background-color: #000;
+  animation: slide-in 0.5s ease-in-out forwards;
+}
+
+@keyframes slide-in {
+  0% {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
   }
 }
 
-// Add event listeners to the tab buttons
-const tabButtons = document.getElementsByClassName('tablinks');
-for (let i = 0; i < tabButtons.length; i++) {
-  tabButtons[i].addEventListener('click', function (event) {
-    openTab(event, this.getAttribute('data-tab'));
-  });
+.section-title {
+  text-align: center;
+  font-size: 32px;
+  margin-bottom: 20px;
 }
 
-// Set the default tab to be opened on page load
-document.getElementsByClassName('tablinks')[0].click();
+.tabcontent p {
+  margin-bottom: 10px;
+}
+
+.tabcontent ul {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+  margin-bottom: 20px;
+}
+
+.tabcontent ul li {
+  margin-bottom: 5px;
+}
+
+.tabcontent img {
+  max-width: 100%;
+  margin-top: 20px;
+}
+
+/* Add more styles for other sections, elements, and animations */

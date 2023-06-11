@@ -39,11 +39,11 @@ function openTab(event, tabId) {
     const id = setInterval(frame, 5);
   
     function frame() {
-      if (pos === -100) {
+      if (pos === 100) {
         clearInterval(id);
         element.style.display = 'none';
       } else {
-        pos--;
+        pos++;
         element.style.right = pos + '%';
       }
     }
