@@ -14,6 +14,14 @@ function openTab(event, tabId) {
     event.currentTarget.classList.add('active');
   }
   
+  // Add event listeners to the tab buttons
+  const tabButtons = document.getElementsByClassName('tablinks');
+  for (let i = 0; i < tabButtons.length; i++) {
+    tabButtons[i].addEventListener('click', function (event) {
+      openTab(event, this.getAttribute('data-tab'));
+    });
+  }
+  
   // Set the default tab to be opened on page load
   document.getElementsByClassName('tablinks')[0].click();
   
