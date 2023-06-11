@@ -1,29 +1,8 @@
-// Open the specified tab and show its content with sliding animation
+// Open the specified tab and show its content
 function openTab(event, tabId) {
     const tabContents = document.getElementsByClassName('tabcontent');
-    const activeTab = document.getElementById(tabId);
-    
-    // Check if the tab is already active
-    if (activeTab.style.display === 'block') {
-      return;
-    }
-    
     for (let i = 0; i < tabContents.length; i++) {
-      const tabContent = tabContents[i];
-      
-      if (tabContent.style.display === 'block') {
-        // Slide out the currently active tab
-        tabContent.style.animation = 'slide-out 0.5s forwards';
-        
-        setTimeout(() => {
-          tabContent.style.display = 'none';
-          tabContent.style.animation = '';
-          
-          // Slide in the selected tab
-          activeTab.style.animation = 'slide-in 0.5s forwards';
-          activeTab.style.display = 'block';
-        }, 500); // Wait for slide-out animation to finish
-      }
+      tabContents[i].style.display = 'none';
     }
   
     const tabLinks = document.getElementsByClassName('tablinks');
@@ -31,6 +10,7 @@ function openTab(event, tabId) {
       tabLinks[i].classList.remove('active');
     }
   
+    document.getElementById(tabId).style.display = 'block';
     event.currentTarget.classList.add('active');
   }
   
