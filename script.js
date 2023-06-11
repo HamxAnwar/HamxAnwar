@@ -2,25 +2,24 @@
 function openTab(event, tabId) {
     const tabContents = document.getElementsByClassName('tabcontent');
     const activeTab = document.getElementById(tabId);
-    
+  
     // Check if the tab is already active
     if (activeTab.style.display === 'block') {
       return;
     }
-    
+  
     for (let i = 0; i < tabContents.length; i++) {
       const tabContent = tabContents[i];
-      
+  
       if (tabContent.style.display === 'block') {
         // Slide out the currently active tab
-        tabContent.style.animation = 'slide-out 0.5s forwards';
-        
+        slideOut(tabContent);
+  
         setTimeout(() => {
           tabContent.style.display = 'none';
-          tabContent.style.animation = '';
-          
+  
           // Slide in the selected tab
-          activeTab.style.animation = 'slide-in 0.5s forwards';
+          slideIn(activeTab);
           activeTab.style.display = 'block';
         }, 500); // Wait for slide-out animation to finish
       }
@@ -32,6 +31,38 @@ function openTab(event, tabId) {
     }
   
     event.currentTarget.classList.add('active');
+  }
+  
+  // Slide out the specified element
+  function slideOut(element) {
+    let pos = 0;
+    const id = setInterval(frame, 5);
+  
+    function frame() {
+      if (pos === -100) {
+        clearInterval(id);
+        element.style.display = 'none';
+      } else {
+        pos--;
+        element.style.right = pos + '%';
+      }
+    }
+  }
+  
+  // Slide in the specified element
+  function slideIn(element) {
+    let pos = -100;
+    element.style.display = 'block';
+    const id = setInterval(frame, 5);
+  
+    function frame() {
+      if (pos === 0) {
+        clearInterval(id);
+      } else {
+        pos++;
+        element.style.right = pos + '%';
+      }
+    }
   }
   
   // Add event listeners to the tab buttons
