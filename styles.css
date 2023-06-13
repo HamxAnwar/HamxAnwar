@@ -174,7 +174,7 @@ header {
 }
 
 .contact-info a {
-  color: #000000; /* Set the color for the icons */
+  color: #111111; /* Set the color for the icons */
   text-decoration: none; /* Remove underline from the icons */
   font-size: 30px; /* Set the size of the icons */
 }
