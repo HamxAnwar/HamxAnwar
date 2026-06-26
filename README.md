@@ -27,7 +27,7 @@ Expanding RSI’s product portfolio and forming research and development partner
 
 📧 hamzaanwar93@outlook.com
 
-🌐 https://robosoftinnovations.com/#team
+🌐 https://robosoftinnovations.com/
 
 <!---
 HamxAnwar/HamxAnwar is a ✨ special ✨ repository because its `README.md` (this file) appears on your GitHub profile.
